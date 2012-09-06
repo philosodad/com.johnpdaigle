@@ -2,8 +2,6 @@
 # Code Highlighting
 ###
 
-require 'rack/codehighlighter'
-require 'pygments'
 use Rack::Codehighlighter, 
   :pygments,
   :element => "pre>code",
