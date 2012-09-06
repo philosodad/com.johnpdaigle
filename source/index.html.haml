@@ -1,0 +1,132 @@
+!!! Strict
+%html
+  %head
+    %title John P. Daigle: Resume
+    %link(rel="stylesheet" href="stylesheets/resume.css")
+    %meta(http-equiv="Content-Type" content="text/html; charset=ISO-8859-1")
+  %body
+    .absolutist
+      .column0
+      .column2
+        %div.sidebar
+          = partial('partials/links', :locals => {:location => :home})
+        %div.space
+      .column1
+        .nameplate
+          .workblock
+            .when
+              %p John P. Daigle
+            .where
+              %ul
+                %li Coding
+                %li Automation
+                %li Design
+        .space
+        .section
+          .title
+            %p Core Skills:
+          .topblock
+            .when
+              %p Languages:
+            .where
+              %p Ruby, Python, JavaScript
+          .midblock
+            .when
+              %p Web Development:
+            .where
+              %p Rails, Grails, Padrino, Neo4J
+          .midblock
+            .when
+              %p IDEs:
+            .where
+              %p Emacs, Vim
+          .midblock
+            .when
+              %p Version Control:
+            .where
+              %p Mercurial, Git
+          .midblock
+            .when
+              %p Documentation:
+            .where
+              %p LaTeX, MarkDown, WYSIWYG
+          .lowblock
+            .when
+              %p Presentation:
+            .where
+              %p LaTeX, TikZ, WYSIWYG
+        .section
+          .space
+          .title
+            %p
+              Recent Work 
+              %br/ 
+              &amp; Projects:
+          .workblock
+            .when
+              %p 2010-Present
+            .where
+              %ul
+                %li
+                  %strong Development Consultant
+                %li ThoughtWorks, Inc.
+                %li Atlanta, GA
+            .what
+              %ul
+                %li Delivery of software 
+                %li Training client developers in best practices
+          .space
+          .workblock
+            .when
+              %p 2007-Present
+            .where
+              %ul
+                %li
+                  %strong Simulation of Ad Hoc Networks
+                %li Georgia State University
+                %li Atlanta, GA
+            .what
+              %ul
+                %li Distributed computation simulator written in Ruby, designed to test algorithm performance.
+                %li Used to test several distributed graph algorithms for publication
+                %li 
+                  Open source code
+                  %a(href="http://bitbucket.org/philosodad/graph_framework") hosted on bitbucket
+          .space
+          .workblock
+            .when
+              %p 2005-2007
+            .where
+              %ul
+                %li
+                  %strong FSI Template and Automation Suite
+                %li FletcherMartin Advertising
+                %li Atlanta, GA
+            .what
+              %ul
+                %li User focused system, increased productivity by 300%
+                %li AppleScript, JavaScript, Shell programming to automate Adobe InDesign and Operating System 
+                %li Rigourously tested in production environment
+        .section
+          .space
+          .title
+            %p Education
+          .workblock
+            .when
+              %p 2010:
+            .where
+              %ul
+                %li MS, Computer Science
+                %li Georgia State University
+                %li Atlanta, GA
+          .workblock
+            .when
+              %p 1996:
+            .where
+              %ul
+                %li BFA, Video Prodcution
+                %li Savannah College of Art &amp; Design
+                %li Savannah, GA
+        .space
+      .column3
+      .space

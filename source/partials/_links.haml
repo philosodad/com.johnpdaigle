@@ -1,0 +1,36 @@
+%ul
+  %li
+    - case locals[:location]
+    - when :home
+      .here Home
+    - else
+      %a(href="/index.html") Home
+  %li 
+    %a(href="http://student.johnpdaigle.com") Research
+  %li 
+    - case locals[:location]
+    - when :blog
+      .here Perplexinomicon
+    - else
+      %a(href="/complexable.html") Perplexinomicom
+  %li j.paul.daigle[at]gmail.com
+  %li 678-379-8466
+  %li
+    %a(href="http://www.linkedin.com/in/johnpdaigle") 
+      %img(src="http://www.linkedin.com/img/webpromo/btn_profile_bluetxt_80x15.gif" 
+           width="80" 
+           height="15" 
+           alt="View John Daigle's profile on LinkedIn")
+
+  %li
+    %a(href="http://jigsaw.w3.org/css-validator/")
+      %img(src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+           width="72"
+           height="25" 
+           alt="Valid CSS!")
+  %li
+    %a(href="http://validator.w3.org/check?uri=referer")
+      %img(src="http://www.w3.org/Icons/valid-html401-blue"
+           width="72"
+           height="25"
+           alt="Valid HTML 4.01 Strict")
