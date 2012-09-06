@@ -1,4 +1,41 @@
 ###
+# Code Highlighting
+###
+
+require 'rack/codehighlighter'
+require 'pygments'
+use Rack::Codehighlighter, 
+  :pygments,
+  :element => "pre>code",
+  :pattern => /\A:::([-_+\w]+)\s*\n/,
+  :markdown => true,
+  :options => {:noclasses => true, :style => "colorful"}
+
+###
+# Blog settings
+###
+
+activate :blog do |blog|
+ # blog.permalink = ":year/:month/:day/:title.html"
+ # blog.sources = ":year-:month-:day-:title.html"
+ # blog.taglink = "tags/:tag.html"
+ # blog.layout = "blog_layout"
+ # blog.summary_separator = /(READMORE)/
+ # blog.summary_length = 250
+ # blog.year_link = ":year.html"
+ # blog.month_link = ":year/:month.html"
+ # blog.day_link = ":year/:month/:day.html"
+ # blog.default_extension = ".markdown"
+
+  blog.layout = "complexable-post.haml"
+  blog.prefix = "complexable"
+  blog.tag_template = "tag.html"
+  blog.calendar_template = "calendar.html"
+end
+
+page "complexable.html", :layout => "complexable.haml"
+
+###
 # Compass
 ###
 

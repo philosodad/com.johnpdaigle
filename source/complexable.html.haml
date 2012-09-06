@@ -1,0 +1,18 @@
+.section
+  .title
+    %p Recent:
+  - blog.articles[0...10].each do |article|
+    .workblock
+      .when
+        %p
+          %span
+            = article.date.strftime('%b %e')
+      .where
+        %p
+          %a(href="#{article.url}")
+            %span(class="article-title")
+              = article.title
+      .what
+        %p
+        = article.summary
+    .space

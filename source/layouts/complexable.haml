@@ -1,0 +1,21 @@
+!!!
+%html
+  %head
+    %title Perplexinomicon
+    %link(rel="stylesheet" href="/stylesheets/resume.css")
+    %meta(http-equiv='X-UA-Compatible' content='IE=edge;chrome=1')
+  %body
+    .absolutist
+      .column0
+      %div(class="column1")
+        .nameplate
+          .workblock
+            .when
+              %p Perplexinomicon
+        .space
+        = yield
+      .column2
+        .sidebar
+          = partial('partials/links', :locals => {:location => :blog})
+      .column3
+      .space

@@ -1,0 +1,16 @@
+---
+title: About this Blog 
+date: 2012-09-02 14:02 -04:00
+tags:
+---
+
+I'm relaunching the *Perplexinomicon* here, at my main site. This blog--and site--is being put together using the [Middleman](http://middlemanapp.com/) framework. I'm a little unsure about this, because Middleman requires [Sinatra](http://www.sinatrarb.com/) and [Padrino](http://www.padrinorb.com/), and since you can build an entire web app using Padrino, I'm wondering if Middleman isn't overkill for static sites. But that's what it is advertised for.
+
+I'm using Middleman because I want to move my blog and website hosting from HostGator to Heroku, partly because Heroku is free at my bandwidth and storage requirements and partly because Heroku is something I want to start working with more. I have applications I want to write, and Heroku is a cloudy place where I can store these things. So gettting the static website up is a first step. At some point, I'll probably add some JavaScript to this page, since it currently is pretty much exclusively patched together with a combination of Haml and Sass.
+
+Sass without variables at the moment, which makes me wonder why I'm using Sass at all aside from the slight improvement in syntax over CSS. Haml, on the other hand, is an extremely nice templating language, and even if I weren't using any variables at all I'd prefer the combination of Haml and Markdown over HTML. I'm sure that there are people in the world who don't like Haml. I'm not a huge fan of having to translate the Ruby in my head into the Haml syntax, which is much more like Python.
+
+    :::ruby
+    x.each do |this|
+      p that
+    end

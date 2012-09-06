@@ -1,0 +1,33 @@
+!!!
+%html
+  %head
+    %link(rel="stylesheet" href="/stylesheets/resume.css")
+    %meta(charset="utf-8")
+    %meta(http-equiv='X-UA-Compatible' content='IE=edge;chrome=1')
+  %body
+    .absolutist
+      .column0
+      %div(class="column1" id="main" role="main")
+        .nameplate
+          .workblock
+            .when
+              %p Perplexinomicon
+        .space
+        .section
+          .title
+            %p
+              = current_article.title
+          .workblock
+            .when
+              %p
+                = current_article.date.strftime('%b %e')
+            .where
+            .what
+              = yield
+          .space
+      .column2
+        .sidebar
+          = partial('partials/links')
+        .space
+      .column3
+      .space
