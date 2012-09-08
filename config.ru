@@ -11,8 +11,3 @@ use ::Rack::Codehighlighter,
   :options => {:noclasses => true, :style => "colorful"}
 
 run Middleman.server
-
-if ENV['HOME'] == '/app'
-  require 'rubypython'
-  RubyPython.start(:python_exe => "python2.6")
-end
