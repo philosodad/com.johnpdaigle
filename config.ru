@@ -1,7 +1,6 @@
 require 'rubygems'
 require 'middleman/rack'
 require 'rack/codehighlighter'
-require 'rubypython'
 require 'pygments'
 
 use ::Rack::Codehighlighter, 
@@ -12,3 +11,8 @@ use ::Rack::Codehighlighter,
   :options => {:noclasses => true, :style => "colorful"}
 
 run Middleman.server
+
+if ENV['HOME'] == '/app'
+  require 'rubypython'
+  RubyPython.start(:python_exe => "python2.6")
+end
