@@ -2,6 +2,7 @@ require 'rubygems'
 require 'middleman/rack'
 require 'rack/codehighlighter'
 require 'pygments'
+require 'rubypython'
 
 use ::Rack::Codehighlighter, 
   :pygments,
@@ -11,3 +12,4 @@ use ::Rack::Codehighlighter,
   :options => {:noclasses => true, :style => "colorful"}
 
 run Middleman.server
+RubyPython.start
