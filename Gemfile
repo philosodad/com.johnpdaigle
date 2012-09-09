@@ -9,4 +9,4 @@ gem "builder", "3.0.0"
 #for pygments
 gem "rack-codehighlighter", :git => "git://github.com/wbzyl/rack-codehighlighter.git"
 gem "pygments.rb"
-gem "rubypython"
+gem "rubypython", "0.5.1"
