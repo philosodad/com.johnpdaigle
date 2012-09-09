@@ -8,11 +8,14 @@ I'm relaunching the *Perplexinomicon* here, at my main site. This blog--and site
 
 I'm using Middleman because I want to move my blog and website hosting from HostGator to Heroku, partly because Heroku is free at my bandwidth and storage requirements and partly because Heroku is something I want to start working with more. I have applications I want to write, and Heroku is a cloudy place where I can store these things. So gettting the static website up is a first step. At some point, I'll probably add some JavaScript to this page, since it currently is pretty much exclusively patched together with a combination of Haml and Sass.
 
-Sass without variables at the moment, which makes me wonder why I'm using Sass at all aside from the slight improvement in syntax over CSS. Haml, on the other hand, is an extremely nice templating language, and even if I weren't using any variables at all I'd prefer the combination of Haml and Markdown over HTML. I'm sure that there are people in the world who don't like Haml. I'm not a huge fan of having to translate the Ruby in my head into the Haml syntax, which is much more like Python.
+Sass without variables at the moment, which makes me wonder why I'm using Sass at all aside from the slight improvement in syntax over CSS. Haml, on the other hand, is an extremely nice templating language, and even if I weren't using any variables at all I'd prefer the combination of Haml and Markdown over HTML. I'm sure that there are people in the world who don't like Haml. I'm not a huge fan of having to translate the Ruby in my head into the Haml syntax, which is much more like Python--it's tab delineated.
 
-    :::ruby
-    x.each do |this|
-      p that
-    end
+So the challenge was to get my resume written in Haml and Sass, then put onto Heroku. This was fairly trivial. There were a few growing pains, but overall, it was just a matter of translating this:
 
- Code Highlighter is a bear.
+    :::html
+    <p>this</p>
+
+Into this:
+
+    :::haml
+    %p this
