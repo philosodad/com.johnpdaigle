@@ -4,9 +4,9 @@ date: 2012-09-02 14:02 -04:00
 tags:
 ---
 
-I'm relaunching the *Perplexinomicon* here, at my main site. This blog--and site--is being put together using the [Middleman](http://middlemanapp.com/) framework. I'm a little unsure about this, because Middleman requires [Sinatra](http://www.sinatrarb.com/) and [Padrino](http://www.padrinorb.com/), and since you can build an entire web app using Padrino, I'm wondering if Middleman isn't overkill for static sites. But that's what it is advertised for.
+This blog--and site--is being put together using the [Middleman](http://middlemanapp.com/) framework. I'm using Middleman because I want to move my blog and website hosting from HostGator to Heroku, partly because Heroku is free at my bandwidth and storage requirements and partly because Heroku is something I want to start working with more. I have applications I want to write, and Heroku is a cloudy place where I can host these applications. So gettting the static website up is a first step. 
 
-I'm using Middleman because I want to move my blog and website hosting from HostGator to Heroku, partly because Heroku is free at my bandwidth and storage requirements and partly because Heroku is something I want to start working with more. I have applications I want to write, and Heroku is a cloudy place where I can store these things. So gettting the static website up is a first step. At some point, I'll probably add some JavaScript to this page, since it currently is pretty much exclusively patched together with a combination of Haml and Sass.
+Overall, this process went pretty smoothly, but there were some setbacks.
 
 The first step was to get middleman set up at all. Typically, when I start a project like this, I'll create a gemset using rvm and then use bundler from there. That's what I did here, too, just following the instructions on the middleman [getting started](http://middlemanapp.com/getting-started/welcome/) page and then converting a few files. I wanted to have my resume/cv page be the initial landing spot and to use a combination of Haml and Sass as my templating languages.
 
@@ -71,11 +71,22 @@ Into this:
       padding: 0px
       border-right: solid #000000 10px
 
-Once that was done, I wanted to add the blogging function. That wasn't difficult either, I just added the `middleman-blog` gem and made a few changes to the config.rb file. After that it was a matter of fixing up the layout function and main blog splash page.  
+To make sure it was using the correct doctype, I added the line
+
+    :::ruby
+    set :haml, :format => :html4
+
+to the config file as well.
+
+Once that was done, I wanted to add the blogging function. That wasn't difficult either, I just added the `middleman-blog` gem and made a few changes to the config.rb file. Specifically, the config file specifies the layout file that the blogging gem expects, and I wanted to make sure I changed that, the blogging prefix so that I could store my blog files in a subfolder, and the main layout file for the blog splash page.  
+
+That did take some time, but honestly most of the time was a result of my not really reading the haml documentation. If I had, I would have realized that the source of all of my bugs was using `= blog.articles[0...10].each` when I should have been using `- blog.articles[0...10].each` to iterate through my blog posts.
+
+So that brain freeze aside, things went pretty smoothly.
 
 The real challenge was getting pygments set up. There are [instructions for using pygments](http://middlemanapp.com/advanced/rack-middleware/) on the Middleman site, but there are a few pitfalls you might want to be aware of if you want to use pygments with Heroku.
 
-The main thing is that the whole system seems to be fairly dependent on using the right versions of everything. The combination of gems and versions that worked for me was to use default versions of middleman and middleman blog, but to specify builder 3.0.0 and rubypython 0.5.1. For whatever reason, later versions of rubypython crash the app on heroku, and later versions of builder produce a warning `undefining 'object_id' may cause serious problems`. I didn't want serious problems, so I used an earlier version of builder.
+The main difficulty I had was that there are a couple of gems that need to be the exact correct version to work. The combination of gems and versions that worked for me was to use default versions of middleman and middleman blog, but to specify builder 3.0.0 and rubypython 0.5.1. For whatever reason, later versions of rubypython crash the app on heroku, and later versions of builder produce a warning `undefining 'object_id' may cause serious problems`. I didn't want serious problems, so I used an earlier version of builder.
 
 There are a lot of instructions on the internet for setting up your config.ru file. Many of them include ways to specify the environment you are working in. This is excellent practice, but my entire config.ru file is:
 
@@ -96,4 +107,6 @@ There are a lot of instructions on the internet for setting up your config.ru fi
       run Middleman.server
       RubyPython.start(:python_exe => "python2.6")
 
-The python version is crucial, The app crashes without it. So with all of that together, this is a middleman app hosted on Heroku.  
+The python version is crucial, The app crashes without it.
+
+But that was basically all the trouble I had setting up my middleman app on heroku. And so far, it's working, if a bit slower than I might like. 
