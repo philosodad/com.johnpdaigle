@@ -1,3 +1,10 @@
+$block-color: #f1f5f9
+$page-back: #000000
+$section-color: #ffffff
+$full-column: 726px
+$side-column: 263px
+$side-column-image: "../images/cuber.png"
+
 body
   padding-left: 0px
   padding-right: 0px
@@ -5,7 +12,7 @@ body
   font:
     family: Georgia, "Times New Roman", Times, serif
     size: small 
-  background-color: #000000
+  background-color: $page-back
 
 div.absolutist
   width: 999px
@@ -13,7 +20,7 @@ div.absolutist
   margin-left: auto
   margin-right: auto
   margin-top: 20px
-  background: #FFFFFF
+  background: $section-color
   padding-left: 0px
 
 div.column0
@@ -22,28 +29,28 @@ div.column0
   height: 100px
 
 div.column1
-  width: 726px
+  width: $full-column
   position: relative
   float: left
-  background: url(../images/fire.png) no-repeat top left #ffffff
+  background: url(../images/fire.png) no-repeat top left $section-color
   background-position: 0px -100px
   padding: 0px
-  border-right: solid #000000 10px
+  border-right: solid $page-back 10px
 
 div.column2
   clear: none
-  width: 263px
+  width: $side-column
   position: relative
   float: right
-  background: url(../images/cuber.png) no-repeat top right #ffffff
+  background: url($side-column-image) no-repeat top right $section-color
 
 div.column3
   clear: left
-  width: 726px
+  width: $full-column
   position: relative
   float: left
   height: 100px
-  background: url(../images/cube_short.png) no-repeat bottom left #FFFFFF
+  background: url(../images/cube_short.png) no-repeat bottom left $section-color
   border-right: solid 10px
 
 div.space
@@ -51,7 +58,7 @@ div.space
   width: 100%
   clear: both
   position: relative
-  background: #000000
+  background: $page-back
 
 div.section
   clear: both
@@ -66,7 +73,7 @@ div.title
   width: 22%
   float: left
   position: relative
-  background: #ffffff
+  background: $section-color
   p
     text-align: right
 
@@ -90,7 +97,7 @@ div.workblock
   width: 75%
   position: relative
   float: right
-  background: #f5f5f5
+  background: $block-color
   padding-bottom: 10px
   padding-top: 10px
 
@@ -99,7 +106,7 @@ div.topblock
   width: 75%
   position: relative
   float: right
-  background: #f5f5f5
+  background: $block-color
   padding-bottom: 0px
   padding-top: 10px
 
@@ -108,7 +115,7 @@ div.midblock
   width: 75%
   position: relative
   float: right
-  background: #f5f5f5
+  background: $block-color
   padding-bottom: 0px
   padding-top: 0px
 
@@ -117,7 +124,7 @@ div.lowblock
   width: 75%
   position: relative
   float: right
-  background: #f5f5f5
+  background: $block-color
   padding-bottom: 10px
   padding-top: 0px
 
@@ -161,12 +168,16 @@ div.what
     text:
       justify: newspaper
       align: justify
+  code
+    background: $section-color
+  ul
+    padding-left: 1em
 
 div.sidebar
   position: relative
   float: left
-  width: 206px
-  background: #FFFFff
+  width: $side-column - image-width($side-column-image)
+  background: $section-color
   p
     text-align: left
   ul
@@ -176,11 +187,11 @@ div.sidebar
     padding-left: 0px
   li
     text-align: left
-    background: #f5f5f5
+    background: $block-color
     padding-left: 20px
     padding-right: 0px
     height: 30px
-    border-bottom: 4px #ffffff solid
+    border-bottom: 4px $section-color solid
     padding-top: 10px
     a
       text-decoration: none
