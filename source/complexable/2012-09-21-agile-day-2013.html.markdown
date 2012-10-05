@@ -1,0 +1,17 @@
+---
+title: Agile Day 2013
+date: 2012-09-21 17:44 -04:00
+tags: nosql, sql, fads
+---
+
+I'm sitting in Laguardia International Airport on a beautiful day in New York, waiting for a flight home. There are lots of flights home, of course, because there is a flight every hour, on the hour, but for some reason I booked a flight that leaves at 9pm. That seemed like a good idea at the time, but now... well, now it just seems dumb.
+
+I was in New York for Agile Day 2013, a one day conference on agile means and methods. I had high hopes for this conference. My high hopes were both exceeded and dashed. On the one hand, I did not expect to have the incredibly interesting conversation that I had with Dave Thomas on Thursday night. Dave is a very smart guy, and he was extremely generous with his time and thoughts. Among the things we talked was the death of object oriented languages and NoSQL databases. These are predictions that he's making, based on experience, that buck a lot of the current thinking in programming. 
+
+Being me, I had to argue this point to understand it, and my plan of attack was to point out a case where I *had* used a NoSQL datastore (redis) to good effect. I had a very limited need, and a key-value store was the right solution. And I got grudging agreement that in limited circumstances, it might make sense to do something like that.
+
+And then I thought about *why* I wanted to use a key-value store instead of a database. After all, I could make a database table that gave me the same functionality and then some. It would probably even be fast. And I could certainly do more with it. So why use redis to do that?
+
+My reason was that I was using Rails, and in order to communicate with the database tables I would need to create an object model and I just didn't need one. I didn't need an object, I needed to retrieve a value based on a key. In other words, the object oriented system I was using was making NoSQL attractive because it allowed me to get things done without creating new objects. So it isn't really a great counterexample to the central point. Because what I *really* needed was not a different kind of data store, it was direct access to a data store.
+
+So what does that mean? Honestly, I don't know. There seems to be a difference between persistent storage and data. When Dave Thomas talks about data, I get the feeling he's talking about serious data, data you might want to mine, analyze, and evaluate. I don't know if most web applications are consumers of large data sets, if there is really a need for the typical customer to have lightning fast access and analysis or the ability to parse the twitterverse. If you do, though, what should you store your data in?

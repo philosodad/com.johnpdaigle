@@ -1,0 +1,33 @@
+---
+title: "Agile UX: A Battle of Cultures?"
+date: 2012-09-23 20:08 -04:00
+tags: agile, ux
+---
+
+At Agile Day NYC 2012, I encountered a familiar meme. The meme is "UX people are the new prima donnas". The idea being that the *old* prima donnas, the software engineers, are now on board with agile but that those pesky UX guys just won't get on board. And I have to admit, this resonates with me to a degree, because I know some UX people who hate agile. They don't get it, they don't like it, and as far as they can tell, they have no place in it.
+
+This is not their fault. 
+
+It isn't their fault for a few reasons. One reason is that a lot of them are in projects that are Agile in Name Only. These aino projects claim to be agile, but they might have standups that run for an hour, endless meetings, artificial barriers between silos, and cowboy coders. These kinds of projects kill the reputation of the agile community, primarily because they aren't fun to work on for anybody. 
+
+I feel I should take a moment to explain that last clause. Fun is not usually seen as a business value. Very few companies value fun, and many more companies view fun as a negative. If the team is having fun, how can they be working? *Work isn't fun*, goes the cliche, *that's why they call it work.* But the thing is, coding *is* fun. Writing code, solving problems, seeing your software in the public domain, *is* fun. It kicks *ass* to see all your tests go green. Other people also enjoy what they do. And there isn't anything wrong with that. If you like doing your job, if you enjoy it, you're probably more productive then you are if you hate every minute of it.
+
+Where a lot of managers that I've met fail to understand agile is right there. Agile is supposed to be fun. It's supposed to be a group of people working together at a sustainable pace to create something that they can be proud of.
+
+Agile is not XP, or Scrum, or anything other methodology. It isn't stand-up meetings or automated testing or CI servers. It isn't CD or CD2 or iteration management. Agile is a way of thinking. Now, don't get me wrong. All of those other things are important. In an enterprise environment, you *need* automation. The daily stand-up serves a purpose. But if the daily stand-up doesn't serve a purpose on your team, if the things that you are supposed to get from daily stand-up come from some other process that you've figured out, then dropping the stand-up does not make you "not agile". *Keeping* a pointless meeting makes you not agile.
+
+Maybe we should try to clarify what an agile project is, and how you can tell if you are on one. According to the agile manifesto, an agile project values:
+
+> Individuals and interactions over processes and tools
+
+> Working software over comprehensive documentation
+
+> Customer collaboration over contract negotiation
+
+> Responding to change over following a plan
+
+As you'll note, there's no mention of Scrums, sprints, iterations, or pair-programming. Those are all processes. We value individuals and interactions above those processes. 
+
+Of course, the agile principles do mention some specifics. For example, one of the principles is that "Business people and developers should work together daily throughout the project". A standup meeting is just a way to accomplish that. Sustainable pace is an agile principle. Pair programming and test driven development facilitate that goal. Frequent delivery is a principle, a CI server supports that principle. 
+
+If you want to know whether you work in an agile environment, check out the principles. Check out the values and principles and see if your environment has those values and principles. If they do, chances are it's a fun place to work. 
