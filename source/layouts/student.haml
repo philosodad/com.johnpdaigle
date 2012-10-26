@@ -1,0 +1,14 @@
+!!! Strict
+%html 
+  %head 
+    %title johnpdaigle.com: Student Work in Computer Science
+    %link(type="text/css" rel="stylesheet" href="/stylesheets/student.css")
+    %meta(http-equiv="Content-Type" content="text/html; charset=ISO-8859-1")
+  %body 
+    %div
+      = partial('partials/navbar', :locals => {:location => :vertex})
+    
+      = yield
+    %div
+      = partial('partials/address')
+

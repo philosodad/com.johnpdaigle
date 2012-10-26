@@ -1,0 +1,25 @@
+---
+title: "Don't Cook Fish in the Microwave" 
+date: 2012-10-09 14:08 -05:00
+tags: workplace
+---
+
+When I was working in San Francisco, the office had one of those pod style coffee makers, the ones where you put vacuum sealed grounds pods into a receiver and get a shot of espresso or ristretto or whatever size of pour you push the button for. The office also had some really cool, microwave safe mugs at espresso sizes. So to get my caffeine on, I'd heat up about half a cup of sugar and milk and then throw in three ristretto sized pours one after the other. Until the coffee maker died (it really wasn't build for an office environment) life was good.
+
+Except right after lunch. When the fish-cookers came.
+
+I like fish. And if you want to eat fish with the head still attached, that's a personal choice and I'm not going to argue with it. Cannibalism excepted, I'm pretty relaxed about the dietary choices of others. But fish smells. And whole fish smells even more. And whole fish that's just been microwaved... well, that's a smell that seems to soak into air molecules like cigar smoke into a cashmere sweater.
+
+And from the air, it soaks into milk. So if you just cooked your whole fish in a microwave, that microwave can't be used for at least an hour, unless someone nukes a couple of mugs of water just to soak up the stink. And that's just inconsiderate.
+
+It isn't just fish. It's anything that smells really, really strong. This isn't about good or bad. It's about combinations. Fish smell might be the most delightful thing ever, but the taste of fish smell, warm milk, and coffee isn't a good one. Fish oil doesn't go well with milk.
+
+It's about imposition. You're choosing to hog a resource, regardless of what other people might want or need that resource for. 
+
+I'm going to anticipate an objection to this blog post. The objection is, essentially, that people have a right to heat up their food. This is absolutely, 100% true. You have the right to heat your food in the office microwave. No one can take that away from you. No one is trying to.
+
+I have a right to microwave my coffee. If I exercise my rights, you can also exercise yours. But if you exercise *your* right, you make the microwave unusable for everyone else. This isn't about rights, its about consideration for others. It may sound strange, but it's a fact: Your lunch choices affect the people around you.
+
+What do you gain from making more responsible lunch choices? First, you get rid of a source of resentment that exists right now and which you might not be aware of. Little resentments like that make it more difficult to work with other people. They might be less likely to show patience when considering your ideas. Showing consideration for others in your office will make you a more effective team member. And software development is a team sport.
+
+Being liked gets a bum rap in the software development community. Many young coders don't think that it matters whether people like them or not. This is just not true, it actually matters a *lot* whether your teammates like you *as a teammate*. They don't have to like you as a person, but they do have to think you are someone they want to work with and enjoy working with. Otherwise, they aren't going to want you on the team, and that's not a happy place to be.

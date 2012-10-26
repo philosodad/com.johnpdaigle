@@ -84,13 +84,20 @@ div.nameplate
   width: 100%
   float: left
 
-div.nameplate div.when p 
-  font-variant: small-caps
-  color: #002244
-  font-size: medium
-
-div.nameplate div.where 
-  font-style: oblique
+  .when 
+    p 
+      font-variant: small-caps
+      color: #002244
+      font-size: medium
+    ul
+      margin-left: 0px
+      padding-left: 0px
+      list-style-type: none
+      li
+        font
+          size: small
+  .where 
+    font-style: oblique
 
 div.workblock
   clear: right

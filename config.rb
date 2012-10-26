@@ -27,12 +27,12 @@ activate :blog do |blog|
 
   blog.layout = "complexable-post.haml"
   blog.prefix = "complexable"
-  blog.tag_template = "tag.html"
-  blog.calendar_template = "calendar.html"
+ # blog.tag_template = "tag.html"
+ # blog.calendar_template = "calendar.html"
 end
 
 page "complexable.html", :layout => "complexable.haml"
-
+page "student/*", :layout => "student.haml"
 ###
 # Compass
 ###
