@@ -15,6 +15,7 @@
 
 # Ignore other stuff...
 *.swp
+.DS_Store
 
 # Ignore vendor cache
 /vendor/
