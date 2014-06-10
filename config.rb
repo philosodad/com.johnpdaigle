@@ -31,6 +31,10 @@ activate :blog do |blog|
  # blog.calendar_template = "calendar.html"
 end
 
+activate :disqus do |d|
+  d.shortname = "paul_daigle"
+end
+
 page "complexable.html", :layout => "complexable.haml"
 page "student/*", :layout => "student.haml"
 ###
