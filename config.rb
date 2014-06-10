@@ -32,7 +32,7 @@ activate :blog do |blog|
 end
 
 activate :disqus do |d|
-  d.shortname = "paul_daigle"
+  d.shortname = "complexable"
 end
 
 page "complexable.html", :layout => "complexable.haml"
