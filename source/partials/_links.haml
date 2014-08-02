@@ -6,8 +6,6 @@
     - else
       %a(href="/index.html") Home
   %li 
-    %a(href="/student/index.html") Research
-  %li 
     - case locals[:location]
     - when :blog
       .here Perplexinomicon
@@ -22,6 +20,12 @@
            height="15" 
            alt="View John Daigle's profile on LinkedIn")
 
+  %li
+    %a(href="https://github.com/philosodad")
+      gitHub
+  %li
+    %a(href="https://bitbucket.org/philosodad")
+      bitbucket
   %li
     %a(href="https://twitter.com/jpauldaigle" 
        class="twitter-follow-button" 

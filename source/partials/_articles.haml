@@ -1,0 +1,8 @@
+%ul
+  - blog.articles.group_by {|a| a.date.year }.each do |year, articles| 
+    %li
+      = year
+      - articles.each do |article|
+        %li.article-list
+          %a(href="#{article.url}")
+            = article.title
