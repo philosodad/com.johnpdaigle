@@ -13,14 +13,18 @@ I didn't really need a factory, but I didn't really have any idea how to build a
       class << self
         def create type, opts={}
           klass = constantize(type)
-          if klass.instance_method(:initialize).parameters.empty?
+          if klass.instance_method(:initialize)
+                  .parameters.empty?
             klass.new
           else
             klass.new(opts)
           end
         end
         def constantize type
-          const_get(type.to_s.split("_").map(&:capitalize).join.to_sym)
+          const_get(type.to_s
+                        .split("_")
+                        .map(&:capitalize)
+                        .join.to_sym)
         end
       end
     end
