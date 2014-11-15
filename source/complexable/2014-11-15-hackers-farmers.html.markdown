@@ -1,0 +1,29 @@
+---
+title: Hackers & Farmers
+date: 2014-11-15 16:42 EST
+tags:
+---
+
+A couple of minutes ago, I was listening to some show on PRI (that's Public Radio International), and the guy being interviewed was talking about how we're moving towards this future where all the middle-class jobs are gone for everyone who can't program, and the world is divided into an elite digerati, humble coders (that would be me, I guess) and the huddled masses. Essentially the world that you see now, but with more poor people.
+
+I suppose that's a possibility. I mean, when all the manufacturing jobs have been taken by 3-D printers, and all the extraction jobs are being done by robot, there's a lot less manual work to be by people. It just takes fewer people to do stuff in the modern world. It takes fewer people to make an album, fewer people to make a movie, fewer people to put on a play. It still takes a fair number of people to set up, support, and breakdown a thirteen trailer concert in less than 12 hours, but I suppose we could say that the principle is sound. We're losing jobs to machines, and Google is slowly becoming the reposistory of everything. That gives them enormous power.
+
+It's also true that this is not a bad time to be a programmer. I stopped experiencing the Great Recession in 2010. My life has been on an upswing ever since. I became eminently employable as if by magic, which was frankly awesome. I have a job I love, solving puzzles and making things, and I feel quite fortunate to have that.
+
+And in this brave new world that the guy on PRI is describing, I'll probably still have a job. There's a lot of code that needs to be written to support the world of 3-D printers and so forth. Some of it is probably even web apps, so most likely, I'll be okay.
+
+Until the revolution comes, or we get invaded by aliens or whatever. So.
+
+Life should be good for me and my kind. But it won't be good if everyone else is left behind with no work, because people without jobs still need to eat, and they will want the nice things that the digerati are building, and they will not be happy to be left behind. This could get ugly, right?
+
+Which is what got me thinking about farmers. Real farmers, people who plant seeds and harvest food. This is hard work, but a surprisingly large number of people want to do it. And I buy my food from them, directly or indirectly, because that's really the only way to get it. Some of that food, most of it I guess, comes from farms that are huge industrial operations. They employ fewer people than traditional farms and of course tend to use less environmentally friendly farming techniques. But I get a fair amount of my food from small and medium sized local farmers. Probably less than half the money I spend on food goes to local farmers, but that amount is increasing as we find additional sources. 
+
+There's nothing particularly noble about being a localvore. It's expensive and somewhat difficult, and most people probably don't have the time or the money to care. But the thing is, localvores support people who are doing the job they want to be doing and making a living doing it. It's a job that would be difficult to do by machine and certainly bizarre to attempt with a 3-D printer. We're a long way from being able to produce a decent tomato in any way but the old fashioned way. Even industrial farming, which uses the tried and true method of growing tomatoes, can't produce a decent tomato. 
+
+So all this new technology, this new way of making a living, my way... it ends up supporting people who are engaged in the foundational occupation of our entire civilization. People who are engaged in it much more like hackers than like bureaucrats. The industrial farming complex might be getting rid of menial laborers, but small farmers are independent businesspeople engaged in a profession that they take satisfaction in. And they are helped by technology, by the fact that they can connect with their customers in all kinds of new ways--even if they don't want to have a Facebook page--and even take payment in new ways that give them better control of their money.
+
+And that makes me wonder what other opportunities there are out there for people to take control of their own lives in this new digital age. Ways that don't require them to become hackers, but allow them to engage in any of the thousands of occupations that, like farming, have been industrialized but don't have to be. Would I, for example, spend a hundred dollars on a hand stitched edition of a CC book? I might if it is meant to be a gift. What about a machine stitched copy printed on locally made paper? Again, I don't know, that's a level of luxury good I don't ordinary contemplate. But maybe I only fail to contemplate it because I'm busy spending huge amounts of money on large amounts of poorly made crap from Walmart. Maybe there are opportunities for people to build me the things I need, using 3-D printing an other technologies to do it cheaply and quickly enough that I can afford it and they can make a living doing it. I end up with the bookshelf I actually need, that fits where I need it to fit, and they end up doing something they enjoy and making a living doing it.
+
+Maybe 3D printing means I'll be able to buy a custom built motorcycle for the same price as a mass produced one, with the same confidence that it will be a safe and reliable machine.
+
+I guess I'm an optimist. But what I hope is that, rather than all of this technology leading us into a bleak future where we are all hoping to hit the youtube lottery and become famous, where we are all just clicks in the great google ad market, this technology is enabling us to take control and have a future where being a maker or a farmer is the new ticket into the middle class. I want everyone to have a creative job they enjoy, and to me, that's what having computers and machines doing repetitive labor is all about.
