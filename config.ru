@@ -2,7 +2,6 @@ require 'rubygems'
 require 'middleman/rack'
 require 'rack/codehighlighter'
 require 'pygments'
-require 'rubypython'
 
 use ::Rack::Codehighlighter, 
   :pygments,
