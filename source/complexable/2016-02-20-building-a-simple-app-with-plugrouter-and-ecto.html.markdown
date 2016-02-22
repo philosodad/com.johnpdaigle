@@ -215,7 +215,7 @@ We added `Plug.Builder` and a new plug, `:timefixer`, which we define as a funct
 
 The `:match` plug matches the incoming request to the `post "/log"` function, where we convert the params that came in into a `%Loggex.Logline{}` struct, so that we can insert that into the database. Again, we make pretty heavy use of the pipeline operator here. After inserting the new logline into the database, we return three values, the conn, a response code, and a message. These are passed to the `:dispatch` plug, which returns a 200 to the user. 
 
-And at this point we have a functional logger[[s4]](https://github.com/philosodad/loggex/tree/s4). It isn't as pretty as it could be, and it definitely needs a little cleanup and some error handling, but provided it gets exactly the right inputs, it will save a logline into the postgres database.
+At this point we have a functional logger[[s4]](https://github.com/philosodad/loggex/tree/s4). It isn't as pretty as it could be, and it definitely needs a little cleanup and some error handling, but provided it gets exactly the right inputs, it will save a logline into the postgres database.
 
 Next entry I'll look at how to improve this project by adding configuration, CI, and test coverage metrics. And of course you can find the code on GitHub, [https://github.com/philosodad/loggex](https://github.com/philosodad/loggex).
 
