@@ -12,4 +12,4 @@ use ::Rack::Codehighlighter,
   :options => {:noclasses => true, :style => "colorful"}
 
 run Middleman.server
-RubyPython.start(:python_exe => "python2.6")
+RubyPython.start(:python_exe => "python2.7")
