@@ -4,7 +4,7 @@ date: 2016-02-20 09:37 EST
 tags:
 ---
 
-I've been working with a couple of Elixir technologies lately, Plug.Router and Ecto, and I'm pretty pleased with how easy it is to get them working together. Here's an example -- let's say I want to write a logger. The logger takes in whatever message hits it's log endpoint and writes it to a database. We'll write a proof of concept logger in this post, [you can find the code on GitHub](https://github.com/philosodad/loggex). Occasionally you'll see a cryptic note like this [[s0]](https://github.com/philosodad/loggex), that is an indication that the code up to that point is available under the indicated tag. 
+I've been working with a couple of Elixir technologies lately, Plug.Router and Ecto, and I'm pretty pleased with how easy it is to get them working together. Here's an example -- let's say I want to write a logger. The logger takes in whatever message hits its log endpoint and writes it to a database. We'll write a proof of concept logger in this post, [you can find the code on GitHub](https://github.com/philosodad/loggex). Occasionally you'll see a cryptic note like this [[s0]](https://github.com/philosodad/loggex), that is an indication that the code up to that point is available under the indicated tag. 
 
 If you want to follow along with this exercise, you're going to need to have elixir and postgresql installed on your computer, or if you are a user of vagrant, you can try a prebuilt box for phoenix development like [this one](https://github.com/kiere/vagrant-phoenix-postgres). I haven't tried that box, but it's worth a shot.
 
@@ -75,7 +75,7 @@ The port option is optional, it defaults to 4000. I have about six servers runni
 
 At this point, if you send an http request to `localhost:6438/log`, you should receive a 200 response back[[s2]](https://github.com/philosodad/loggex/tree/s2).
 
-Next, we want to set up the database with ecto. Ecto has it's own mix tasks, which makes this somewhat easier.
+Next, we want to set up the database with ecto. Ecto has its own mix tasks, which makes this somewhat easier.
 
     :::bash
     $ mix ecto.gen.repo
