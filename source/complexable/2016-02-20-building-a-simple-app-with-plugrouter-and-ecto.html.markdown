@@ -127,6 +127,13 @@ The `change` function is automatically reversible. Now, in order to be able to w
       end
     end                
 
+
+
+Having created our migration, it's probably a good idea to run the migration:
+
+    :::bash
+    $ mix ecto.migrate
+
 At this point, using iex, you should be able to start the repo with `Loggex.Repo.start_link` and insert a changeset into the repo. I put a lot of trial and error in, so here's an example iex session. Some of the longer lines have been moved to multiple lines, so you'll want to fix the query, it may not run if just pasted in.
 
     :::iex
@@ -219,4 +226,4 @@ At this point we have a functional logger[[s4]](https://github.com/philosodad/lo
 
 Next entry I'll look at how to improve this project by adding configuration, CI, and test coverage metrics. And of course you can find the code on GitHub, [https://github.com/philosodad/loggex](https://github.com/philosodad/loggex).
 
-
+Here's [part 2](http://www.johnpdaigle.com/complexable/2016/03/05/resetting-a-test-database-with-ecto.html) and [part 3](http://www.johnpdaigle.com/complexable/2016/03/12/elixometer-and-influxdb.html) of this series.

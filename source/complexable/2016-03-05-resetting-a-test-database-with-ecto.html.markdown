@@ -178,4 +178,4 @@ Then in the test itself, we'll add a line to wrap each test block in a transacti
 
 And now when we rerun the tests, we should start each test block with an empty database. [[s7](https://github.com/philosodad/loggex/tree/s7)]
 
-Next entry, we'll look into either deployment or monitoring.
+[Next entry](http://www.johnpdaigle.com/complexable/2016/03/12/elixometer-and-influxdb.html), we'll look into either deployment or monitoring.
