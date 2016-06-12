@@ -1,5 +1,5 @@
 ---
-title: Running from Shell
+title: Running the Plug App from Shell
 date: 2016-05-08 00:45 EDT
 tags:
 ---
