@@ -1,5 +1,5 @@
 ---
-title: Running in Docker
+title: Running from Shell
 date: 2016-05-08 00:45 EDT
 tags:
 ---
