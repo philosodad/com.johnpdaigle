@@ -25,4 +25,4 @@ Which added a deploy section to my travis file with the secure api key, etc.
 
 Which was all I needed to deploy this application to Heroku from travis. If you check out the [application code](https://github.com/philosodad/ping_and_log/tree/v0.0.4) at this point, you'll probably also notice some changes where I've added a supervisor, but otherwise the code hasn't changed much. With a couple of minor additions we can easily add coveralls, so that the code builds, runs coveralls, and deploys if successful.
 
-So now we have continuous deployment of our app, although it doesn't do a whole lot. Let's take a moment to reflect that this was incredibly easy to do. We are devops hero's.
+So now we have continuous deployment of our app, although it doesn't do a whole lot. Let's take a moment to reflect that this was incredibly easy to do. We are devops heroes.
