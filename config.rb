@@ -1,3 +1,7 @@
+## wrenchmode
+#
+use Wrenchmode::Rack
+
 ###
 # Code Highlighting
 ###
