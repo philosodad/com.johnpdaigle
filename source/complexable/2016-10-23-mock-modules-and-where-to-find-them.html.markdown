@@ -4,7 +4,7 @@ date: 2016-10-23 06:59 EDT
 tags:
 ---
 
-Coming from Ruby into Elixir has it's pitfalls. One thing that comes up a lot for TDD folks like myself is how to mock. I've found that this isn't as important in Elixir as it is in Ruby, but there are still a few cases, especially ones where there is a dependency on a third party service, that it is just inevitable. 
+Coming from Ruby into Elixir has its pitfalls. One thing that comes up a lot for TDD folks like myself is how to mock. I've found that this isn't as important in Elixir as it is in Ruby, but there are still a few cases, especially ones where there is a dependency on a third party service, that it is just inevitable. 
 
 There are number of good articles on how to work with mocks in Elixir, and how to mock in Elixir. In this article, I want to look at two strategies for mocking a call to an HTTP server. To do this we'll work with the [Sendalot](https://github.com/philosodad/sendalot) tool that I've been meaning to turn into a service for a while now, but we won't be adding any functionality to it.
 
