@@ -152,7 +152,7 @@ And changing the `config/test.exs` file:
     :::elixir
     config :sendalot, Sendalot, http: Sendalot.TestHttp
 
-And the tests will still pass. But this doesn't smell very good, because the `test_http.ex` file is sitting in our `lib` directory, so this piece of test code is going to become part of our production code. This is probably a dreadful idea, so we should move it into the test folder. If we do, it won't compile, because the project options default to only compiling `lib/`. 
+And the tests will still pass. But this doesn't smell very good, because the `test_http.ex` file is sitting in our `lib` directory, so this piece of test code is going to become part of our production code. This is probably a dreadful idea, so we should move it into the test folder. If we do, it won't compile, because the project options default to only compiling `lib/`.\* 
 
 Elixir's compile paths are set by an `elixirc_paths` option in the `project` section of the `mix.exs` file. We want to set that option explicitly:
 
@@ -176,3 +176,5 @@ And define two private functions in the `mix.exs` file:
     defp elixirc_paths(_), do: ["lib"]
 
 And now we can move the test version of the http module out of the production code, and into the `test/support` folder, all the tests will pass and we can do additional mocking in this file. We'll look at how to use this mock module in another post.
+
+\* Hat tip to @benwilson512 on the excellent elxirlang slack channel for explaining this to me in the first place.
