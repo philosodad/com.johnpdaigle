@@ -83,6 +83,16 @@ Once we've done that, we're going to add a mock response to the test module
 
 The second method is required because we have redefined `get/1` in this module, and `HTTPoison.get/1` will no longer be found automatically. We've got a failing test now, which we can pass by writing the code to handle the 404 response[[github tag: mock404](https://github.com/philosodad/near_earth/tree/mock404)].
 
+    :::elixir
+    case Sets.http.get("https://api....) do
+      {:ok, response = %{status_code: 200}} -> 
+        Poison.decode(response.body)
+      {:ok, %{status_code: 404}} -> 
+        {:error, :not_found}
+    end
+
+Which uses the Sets module to define which version of the http module we want to use.
+
 Now, obviously we could mock the other response as well, and probably should, but what is interesting to me here is that we are using two different approaches in our testing. One test calls the actual API, the other test is will short circuit and return a faked response. We use this at work all the time, because a lot of our HTTP calls are to services that we built or to services we have built simulators for, and that are usually running locally on our dev boxes. In those cases, we really want to call those services most of the time. But, we also want to simulate various types of errors that are are hard to force, and in those cases we can use the mock to throw the appropriate errors. Also, some of the services we call are not ones that we build, or that we have built mock services to simulate, and in those cases we always want to use the fake responses. What is nice about this is that we have a lot of flexibility in how we use this pattern in our testing.
 
 I would encourage anyone who isn't familiar with this pattern to [fork the repo](https://github.com/philosodad/near_earth) and try some different scenarios, such as handling a network timeout or a 401 response, and see how you can use the mock module to simulate those responses. Have fun!
