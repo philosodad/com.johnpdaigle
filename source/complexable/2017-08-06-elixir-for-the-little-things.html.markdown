@@ -12,7 +12,7 @@ Because even if you're working in a PhP shop out in Bakersfield, you can use Eli
 
 A week or so ago, I was faced with a little scripting job where we had to take about 20 basically identical YAML files, and convert them to 20 basically identical XML files. My pair that day and I are both big fans of Elixir, so naturally we solved this with a little Elixir script.
 
-So, obviously the first thing we needed was a library that could turn Elixir data structures into XML, or YAML into Elixir data structures, or possibly both. A quick check on Hex led to the [yaml\_elixir](https://hex.pm/packages/yaml_elixir) library, which is pretty effective at reading YAML files and turning them into Elixir maps.
+So, the first thing we needed was a library that could turn Elixir data structures into XML, or YAML into Elixir data structures, or possibly both. A quick check on Hex led to the [yaml\_elixir](https://hex.pm/packages/yaml_elixir) library, which is pretty effective at reading YAML files and turning them into Elixir maps.
 
     :::elixir
     def file_to_map(path) do
@@ -23,7 +23,7 @@ So, obviously the first thing we needed was a library that could turn Elixir dat
 
 This takes a relative path (like "assets/test.yml") to a .yml file and returns a map, when run from the top level of the project. So that's the first half of the problem solved. 
 
-Unfortunately, writing the XML was not going to be quite so simple, because a) we needed to join multiple YAML files into a single XML file, and because we only need a part of each, and the nesting of the eventual XML file is going to be slightly different than the nesting of the YAML file.
+Unfortunately, writing the XML was not going to be quite so simple, because we needed to join multiple YAML files into a single XML file, and because we only need a part of each, and the nesting of the eventual XML file is going to be slightly different than the nesting of the YAML file.
 
 All of which leads to this code:
 
