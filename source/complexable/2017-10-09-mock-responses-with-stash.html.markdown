@@ -6,11 +6,11 @@ tags:
 
 So a few posts ago, we looked at how to [abstract dependent modules](http://www.johnpdaigle.com/complexable/2016/10/23/mock-modules-and-where-to-find-them.html) in Elixir to make testing easier. That post and its [follow up](http://www.johnpdaigle.com/complexable/2016/11/09/real-responses-from-mock-modules.html) attempt to implement a pattern suggested by [Jose Valim](http://blog.plataformatec.com.br/2015/10/mocks-and-explicit-contracts/), which he called *explicit contract*. This pattern has the following characteristics:
 
-1. The dependent module is wrapped, an interface is created to wrap around it.
-1. A test version of the interface is created to handle test responses
+1. An interface module is created to wrap around the dependency.
+1. A test version of the interface module is created.
 1. Test responses are written in the test interface
 
-Although, frankly, I think it falls somewhat short of a reasonable implementation of that pattern, because it's just too mocky. And we'll continue that half-baked iimplementation in this post, although hopefully in a future post we'll move our implementation into a more correct place.
+Our implementation of this in the [near earth](https://github.com/philosodad/near_earth/tree/mock404) wraps the HTTPoison library. There are some issues with this, but before we get to those I want to look at how we're building and retrieving mock responses. Right now those responses are built into the test module.
 
 This post is concerned with moving our test responses out of the test interface module and into the tests themselves. This is useful because we don't have to move from file to file while we're working on the tests. It should simplify our test code somewhat.
 
@@ -70,7 +70,7 @@ And then add that response to the `:near_earth` stash table in the test:
              NearEarth.get_asteroid("fakevalue")
     end
 
-So we've set the value of `"#{Sets.neo_url}fakevalue?api_key=#{Sets.api_key}"` to be an HTTPoison response with a status of 404.
+So we've set the value of `"#{Sets.neo_url}fakevalue?api_key=#{Sets.api_key}"` to be an HTTPoison response with a status of 404. The `Sets` module is where I'm [defining helpers](https://medium.com/perplexinomicon-of-philosodad/using-macros-to-handle-environment-variables-in-elixir-87bc81ea83dd) to application and environment variables using the [`env_helper`](https://hex.pm/packages/env_helper) library.
 
 The `get_asteroid` call uses the HTTP module:
 
@@ -125,7 +125,7 @@ One obvious problem with this implementation is that I'm making everything very 
 
 We've refactored, and now we want to add an endpoint. In particular, I'd like to get all the asteroids that will make their closest approach today. Fortunately, NASA has a useful `/feed` endpoint that takes a start and end date as arguments. To write the failing test, we'll add another library to our codebase. [Faker](https://hex.pm/packages/faker) is a good library for generating fake data of various kinds, such as dates, addresses, and of course styles of beer. We use Faker at work mostly for dates, addresses and to generate fake car make and model names. Here, we're interested in the date functionality.
 
-We'll also want to add another stub, this wone with a real JSON response from the feed api. We'll again use the `Stubs` module to import the file, and add the stub to the test setup:
+We'll also want to add another stub, this one with a real JSON response from the feed api. We'll again use the `Stubs` module to import the file, and add the stub to the test setup:
 
     :::elixir
     asteroids_response = 
