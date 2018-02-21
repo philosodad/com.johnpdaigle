@@ -159,7 +159,8 @@ We're going to use Ecto for the next part, and for convenience, we're going to c
     $ cd dataday/apps/
     $ mix phx.new.ecto data_munger
     
-This project assumes that there is a `data_munger` database, which we will create next time. For now, we need to connect to our existing database, so let's add some configuration to `/data_munger/config/dev.exs`.
+This project assumes that there is a `data_munger` database, which we will create next time. The config for that database is already set up. To connect to our `imdb_data` database, we need to add configuration to `/data_munger/config/dev.exs`.
+
     :::elixir
     config :name_basics, DataMunger.ImdbRepo,
       adapter: Ecto.Adapters.Postgres,
@@ -169,7 +170,7 @@ This project assumes that there is a `data_munger` database, which we will creat
       hostname: "localhost",
       pool_size: 10
 
-And we need to add the new Repo to our supervision tree. in `data_munger/lib/data_munger/application.ex`
+We also need to add the new `DataMunger.ImdbRepo` to our supervision tree. In `data_munger/lib/data_munger/application.ex`
 
     :::elixir
     def start(_type, _args) do
@@ -334,4 +335,4 @@ And verify that we have access:
       primary_title: "Developing", start_year: 1994,
       tconst: "tt0185275"}]
 
-Next, we're going to work on how to start filtering through this data. The code up to this point is (avaiable here)[https://github.com/philosodad/dataday/tree/2.18], and my first pass at solving all these problems is [available here](https://github.com/philosodad/tiny_bacon_oracle) if you want to read ahead.
+Next, we're going to work on how to start filtering through this data. The code up to this point is [avaiable here](https://github.com/philosodad/dataday/tree/2.18), and my first pass at solving all these problems is [available here](https://github.com/philosodad/tiny_bacon_oracle) if you want to read ahead.
