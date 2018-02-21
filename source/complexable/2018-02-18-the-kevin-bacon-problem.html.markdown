@@ -32,7 +32,7 @@ We'll get into that requirement in more detail in a future post, in this post, w
 
 #### Get The Data into Postgres:
 
-The first step is to get the data. One thing we'll also do is use use `tail` to get rid of the first line of the data, although we also want to use `head` to keep the first line of data.
+The first step is to get the data and prepare it for import. This involves using `head` and `tail` to split the .tsv file in two:
 
     :::bash
     $ wget https://datasets.imdbws.com/title.basics.tsv.gz
@@ -43,13 +43,13 @@ The first step is to get the data. One thing we'll also do is use use `tail` to 
 
 Repeat with title.principals.tsv.gz and name.basics.tsv.gz. We should end up with six files, three containing the column headers, and three containing the column data. This will make importing into Postgres easier.
 
-Now we want to create a postgres database. I created one owned by the postgres user, although I'm not sure that it matters. You have to execute some of the psql commands to follow as a root user, so we'll need to update the grants anyway.
+Now we want to create a postgres database. I created one owned by the postgres user, although I'm not sure that it matters. You have to execute the `copy` command as a root user, so we end up altering the grants on the tables anyway.
 
     :::bash
     $ createdb -O postgres imdb_data
     $ psql imdb_data 
 
-Create a table for the title.basics data. I used the same header names from the tsv file, and arrived at the varchar limits through some trial and error.
+Create a table for the title.basics data. We can refer to the title.basics.headers.tsv file we created earlier for the column names. 
 
     :::psql
     imdb=# create table title_basics(
@@ -65,7 +65,7 @@ Create a table for the title.basics data. I used the same header names from the 
     imdb(# )
     CREATE TAB, 
 
-Load trunc.title.basics.tsv. This is the file that contains only column data, not column headers.
+Now that we've created a table for the title.basics data, we can import the trunc.title.basics.csv file that we created. Remember, this is the data without the header columns.
 
     :::psql
     imdb=# COPY title_basics FROM '/path/to/trunc.title.basics.tsv';
@@ -77,7 +77,7 @@ Now update the privileges on the `title_basics` table so that the postgres user 
     imdb=# grant all on title_basics to postgres;
     GRANT
 
-Now we repeat the process for trunc.title.principals.tsv and trunc.name.basics.tsv. When I was doing this, I ran into some errors, either because the ordering of my columns didn't match the tsv column ordering, or because I was using smallint where I should have used int, or I wasn't allowing the varchar size to be large enough. Eventually, my final schemas looked like this:
+Now we repeat this process for trunc.title.principals.tsv and trunc.name.basics.tsv. When I was doing this, I ran into some errors, either because the ordering of my columns didn't match the tsv column ordering, or because I was using smallint where I should have used int, or I wasn't allowing the varchar size to be large enough. Eventually, my final schemas looked like this:
 
     :::psql
     data_imdb=# \d title_principals
@@ -152,19 +152,14 @@ If that looks more or less like what you're looking at, you're ready to move on.
 
 #### Connect the database to a Phoenix project
 
-Our next goal is to create a phoenix project, mostly for the convenience of the project structure and a couple of helpers. We don't actually need it, do we?
-
-Let's have a look at the phx ecto new stuff. Make a new umbrella project, I might need it later, and then a new phoenix project.
+We're going to use Ecto for the next part, and for convenience, we're going to create an Phoenix ecto project. We'll probably put the microservices we'll be building in a later post into this same umbrella project.
 
     :::bash
     $ mix new --umbrella dataday
     $ cd dataday/apps/
     $ mix phx.new.ecto data_munger
     
-Creates a new ecto project, inconveniently placed in an umbrella project, but for this particular project that might work. What we want to do next is to create the schemas that allow us to access our existing database.
-
-There's no real reason to create two databases here, we could just use the database we've already created, but we're going to use two databases anyway and move the data from one to the other.
-
+This project assumes that there is a `data_munger` database, which we will create next time. For now, we need to connect to our existing database, so let's add some configuration to `/data_munger/config/dev.exs`.
     :::elixir
     config :name_basics, DataMunger.ImdbRepo,
       adapter: Ecto.Adapters.Postgres,
