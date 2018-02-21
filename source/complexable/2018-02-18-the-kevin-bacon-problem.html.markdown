@@ -335,4 +335,4 @@ And verify that we have access:
       primary_title: "Developing", start_year: 1994,
       tconst: "tt0185275"}]
 
-Next, we're going to work on how to start filtering through this data. The code up to this point is [avaiable here](https://github.com/philosodad/dataday/tree/2.18), and my first pass at solving all these problems is [available here](https://github.com/philosodad/tiny_bacon_oracle) if you want to read ahead.
+Next, we're going to work on how to start filtering through this data. The code up to this point is [available here](https://github.com/philosodad/dataday/tree/2.18), and my first pass at solving all these problems is [available here](https://github.com/philosodad/tiny_bacon_oracle) if you want to read ahead.
